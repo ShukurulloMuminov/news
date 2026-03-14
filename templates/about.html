@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid py-3 bg-dark">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-white">Bosh sahifa</a></li>
+            <li class="breadcrumb-item text-primary active">Biz haqimizda</li>
+        </ol>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container py-3">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="{% static 'img/about.jpg' %}" class="img-fluid w-100 rounded" alt="Biz haqimizda"
+                         onerror="this.src='https://via.placeholder.com/600x400?text=Newsers'">
+                    <div class="position-absolute bottom-0 start-0 bg-primary text-white p-4 m-3 rounded">
+                        <h2 class="display-6 fw-bold mb-0">2020</h2>
+                        <p class="mb-0">Yildan beri xizmatda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 mb-3">Biz haqimizda</span>
+                <h1 class="display-5 fw-bold mb-4">Newsers — Ishonchli yangiliklar manbai</h1>
+                <p class="text-muted mb-4">
+                    Newsers — 2020 yildan beri O'zbekiston va dunyo bo'ylab so'nggi yangiliklar, tahlillar va
+                    qiziqarli maqolalarni o'z vaqtida yetkazib beruvchi axborot portali. Biz har kuni minglab
+                    o'quvchilarimizga ishonchli ma'lumot taqdim etamiz.
+                </p>
+                <p class="text-muted mb-4">
+                    Jamoamiz tajribali jurnalistlar, tahlilchilar va texnologiya mutaxassislaridan iborat.
+                    Maqsadimiz — har bir o'quvchiga aniq, tezkor va sifatli axborot yetkazish.
+                </p>
+                <div class="row g-4 mb-4">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="btn-square bg-primary rounded me-3">
+                                <i class="fas fa-newspaper text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">5000+</h5>
+                                <small class="text-muted">Maqolalar</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="btn-square bg-primary rounded me-3">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">100K+</h5>
+                                <small class="text-muted">O'quvchilar</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="btn-square bg-primary rounded me-3">
+                                <i class="fas fa-pen text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">50+</h5>
+                                <small class="text-muted">Jurnalistlar</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="btn-square bg-primary rounded me-3">
+                                <i class="fas fa-award text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">10+</h5>
+                                <small class="text-muted">Mukofotlar</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Mission Start -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 mb-3">Bizning qadriyatlarimiz</span>
+            <h2 class="fw-bold">Nima uchun Newsers?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4">
+                    <div class="btn-square bg-primary rounded mb-3" style="width:50px;height:50px;">
+                        <i class="fas fa-check-circle text-white"></i>
+                    </div>
+                    <h5 class="fw-bold">Ishonchlilik</h5>
+                    <p class="text-muted mb-0">Har bir yangilik tekshirilgan va tasdiqlangan manbalardan olinadi. Biz sifatsiz ma'lumot tarqatmaymiz.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4">
+                    <div class="btn-square bg-primary rounded mb-3" style="width:50px;height:50px;">
+                        <i class="fas fa-bolt text-white"></i>
+                    </div>
+                    <h5 class="fw-bold">Tezkorlik</h5>
+                    <p class="text-muted mb-0">Voqealar sodir bo'lishi bilan darhol xabar beramiz. Bizning jamoamiz 24/7 rejimda ishlaydi.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-4">
+                    <div class="btn-square bg-primary rounded mb-3" style="width:50px;height:50px;">
+                        <i class="fas fa-balance-scale text-white"></i>
+                    </div>
+                    <h5 class="fw-bold">Xolislik</h5>
+                    <p class="text-muted mb-0">Har qanday mavzuni xolis va haqqoniy yoritishga harakat qilamiz. Mafkuraviy bosimdan holi bo'lamiz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mission End -->
+
+
+<!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 mb-3">Jamoamiz</span>
+            <h2 class="fw-bold">Bizning mutaxassislar</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width:100px;height:100px;background:#e9ecef;">
+                        <img src="{% static 'img/team-1.jpg' %}" class="img-fluid w-100" alt=""
+                             onerror="this.parentElement.innerHTML='<i class=\'fas fa-user fa-3x text-secondary mt-3\'></i>'">
+                    </div>
+                    <h5 class="fw-bold mb-1">Akbar Yusupov</h5>
+                    <small class="text-primary">Bosh muharrir</small>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width:100px;height:100px;background:#e9ecef;">
+                        <img src="{% static 'img/team-2.jpg' %}" class="img-fluid w-100" alt=""
+                             onerror="this.parentElement.innerHTML='<i class=\'fas fa-user fa-3x text-secondary mt-3\'></i>'">
+                    </div>
+                    <h5 class="fw-bold mb-1">Malika Rahimova</h5>
+                    <small class="text-primary">Jurnalist</small>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width:100px;height:100px;background:#e9ecef;">
+                        <img src="{% static 'img/team-3.jpg' %}" class="img-fluid w-100" alt=""
+                             onerror="this.parentElement.innerHTML='<i class=\'fas fa-user fa-3x text-secondary mt-3\'></i>'">
+                    </div>
+                    <h5 class="fw-bold mb-1">Sardor Toshmatov</h5>
+                    <small class="text-primary">Tahlilchi</small>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card border-0 shadow-sm text-center p-4">
+                    <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width:100px;height:100px;background:#e9ecef;">
+                        <img src="{% static 'img/team-4.jpg' %}" class="img-fluid w-100" alt=""
+                             onerror="this.parentElement.innerHTML='<i class=\'fas fa-user fa-3x text-secondary mt-3\'></i>'">
+                    </div>
+                    <h5 class="fw-bold mb-1">Nilufar Karimova</h5>
+                    <small class="text-primary">SMM mutaxassisi</small>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+<!-- Contact Start -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 mb-3">Bog'lanish</span>
+            <h2 class="fw-bold">Biz bilan bog'laning</h2>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="d-flex mb-4">
+                    <div class="btn-square bg-primary rounded me-3 flex-shrink-0" style="width:50px;height:50px;">
+                        <i class="fas fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold">Manzil</h6>
+                        <p class="text-muted mb-0">Toshkent shahri, Mustaqillik ko'chasi, 1-uy</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="btn-square bg-primary rounded me-3 flex-shrink-0" style="width:50px;height:50px;">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold">Email</h6>
+                        <p class="text-muted mb-0">info@newsers.uz</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="btn-square bg-primary rounded me-3 flex-shrink-0" style="width:50px;height:50px;">
+                        <i class="fas fa-phone text-white"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold">Telefon</h6>
+                        <p class="text-muted mb-0">+998 90 123 45 67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <form method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control py-3" placeholder="Ismingiz" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" name="email" class="form-control py-3" placeholder="Emailingiz">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="phone_number" class="form-control py-3" placeholder="Telefon raqamingiz">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="subject" class="form-control py-3" placeholder="Mavzu" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" class="form-control py-3" rows="5" placeholder="Xabaringiz"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary py-3 px-5 rounded-pill">Yuborish</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}

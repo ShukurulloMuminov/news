@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body class="bg-light">
+    <main class="py-5">
+        <div class="container">
+            <!-- Category Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="bg-white rounded-4 shadow-sm p-4 border">
+                        <div
+                                class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3"
+                        >
+                            <div>
+                <span class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 mb-2">
+                  Category
+                </span>
+                                <h1 class="h2 fw-bold mb-2">{{ category.name}}</h1>
+
+                            </div>
+
+                            <!-- Search -->
+                            <div style="max-width: 420px; width: 100%">
+                                <form>
+                                    <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-white border-end-0">
+                      <i class="bi bi-search text-secondary"></i>
+                    </span>
+                                        <input
+                                                type="text"
+                                                name="search"
+                                                {%if search%}
+                                                value="{{search}}"
+                                                {% endif%}
+                                                class="form-control border-start-0"
+                                                placeholder="Maqola qidirish..."
+                                        />
+                                        <button class="btn btn-primary px-4" type="submit">Qidirish</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="row g-4">
+                <!-- Articles List -->
+                <div class="col-lg-12">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <span class="text-secondary small">Jami: 10 ta natija</span>
+                    </div>
+                {% for article in articles%}
+                    <!-- Article Item 1 -->
+                    <article class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                        src="{{article.cover.url}}"
+                                        class="img-fluid h-100 w-100 object-fit-cover"
+                                        alt="Maqola rasmi"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-info-subtle text-info-emphasis mb-3">{{article.category.name}}</span>
+                                    <h3 class="h4 fw-bold mb-3">
+                                        <a href="#" class="text-dark text-decoration-none">
+                                            {{article.title}}
+                                        </a>
+                                    </h3>
+                                    <p class="text-secondary mb-3">
+                                       {{article.intro}}
+                                    </p>
+                                    <div
+                                            class="d-flex flex-wrap align-items-center gap-3 text-secondary small mb-3"
+                                    >
+                                        <span><i class="bi bi-calendar3 me-1"></i> {{article.created_at|date:"d.m.Y"}}</span>
+                                        <span><i class="bi bi-clock me-1"></i> {{article.read_time}} o'qiladi</span>
+                                        <span><i class="bi bi-eye me-1"></i>{{article.views}} ko‘rishlar</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill px-4">
+                                        Batafsil o‘qish
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor%}
+
+                    <!-- Pagination -->
+                    <nav class="mt-4" aria-label="Pagination">
+                        <ul class="pagination pagination-lg justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link rounded-start-pill px-4" href="#">Oldingi</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link rounded-end-pill px-4" href="#">Keyingi</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+            </div>
+        </div>
+    </main>
+    </body>
+{% endblock %}
