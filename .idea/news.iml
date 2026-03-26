@@ -7,5 +7,7 @@
     <orderEntry type="jdk" jdkName="Python 3.13 (news)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="todo_39" />
+    <orderEntry type="module" module-name="ShaxsiyBlog" />
+    <orderEntry type="module" module-name="omborxonam" />
   </component>
 </module>
